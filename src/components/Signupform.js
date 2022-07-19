@@ -24,7 +24,7 @@ if (user) {
 
 const Signupform = () => {
     // const [users,setUsers] = useState([])
-    // const userCollectionRef = collection(db, 'Users')
+    const userCollectionRef = collection(db, 'users')
     const [userdata, setuserdata] = useState({
         username: "",
         password: "",
@@ -36,12 +36,7 @@ const Signupform = () => {
         try {
             const res = await createUserWithEmailAndPassword(auth, email, password);
             const user = res.user;
-            await addDoc(collection(db, "users"), {
-                uid: user.uid,
-                name,
-                phone,
-                email,
-            });
+            await addDoc(userCollectionRef, { uid : user.uid ,name: userdata.username, email: userdata.email, phone: userdata.phone });
         } catch (err) {
             console.error(err);
             alert(err.message);

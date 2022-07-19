@@ -28,8 +28,8 @@ const Loginform = () => {
     const logInWithEmailAndPassword = async (email, password) => {
         try {
             await signInWithEmailAndPassword(auth, email, password);
-            
-            history('./Home')
+
+            history('/Home')
         } catch (err) {
             console.error(err);
             alert(err.message);
@@ -72,8 +72,8 @@ const Loginform = () => {
                 </div>
             </div>
             <div className=' mb-6'>
-                <p className='text-sm text-color2 font-Rubik font-normal mt-4 '>Don’t have an account?</p>
-                <a href='/Signup'><h1 className='text-lg  text-color1 font-Rubik font-bold '>Sign up</h1></a>
+                <p className='text-sm text-color2 font-Rubik font-normal mt-4 flex  justify-center '>Don’t have an account?</p>
+                <a href='/Signup'><h1 className='text-lg  text-color1 font-Rubik font-bold  flex justify-center '>Sign up</h1></a>
             </div>
         </div>
     );
