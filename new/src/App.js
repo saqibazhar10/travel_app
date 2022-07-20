@@ -6,19 +6,18 @@ import {
   Routes,
   Route,
 } from 'react-router-dom';
-import Navbar from './components/Navbar';
-// import Home from './components/Home';
+import Home from './components/Home';
 function App() {
   
 
   return (
-    <div className="text-2xl ">
+    <div className='App'>
          <Router>
         <Routes>
           <Route exact path='/' element={< Login />}></Route>
           <Route exact path='/Login' element={< Login />}></Route>
           <Route exact path='/Signup' element={< Signup />}></Route>
-          <Route exact path='/Home' element={< Navbar />}></Route>
+          <Route exact path='/Home' element={< Home />}></Route>
         </Routes>
       </Router>
     </div>

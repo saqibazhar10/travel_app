@@ -4,7 +4,7 @@ import notification from '../assets/noti.png'
 import profilePic from '../assets/pic.png'
 
 
-function Header(props) {
+function Header() {
   return (
 
     <>
@@ -19,7 +19,7 @@ function Header(props) {
 
         <img src={notification} alt='1' className='w-[26px] h-[30px] mt-2 ml-9  md:ml-[700px] '></img>
         <img src={profilePic} alt='1' className='w-[28px] h-[32px] md:h-10 md:w-9 mt-2 md:mt-1 ml-[10px] md:ml-6'></img>
-        <label className='font-Poppins  ml-3 mt-2  w-[73px] h-[21px] font-medium text-[#013B8D]'>{props.un}</label>
+        <label className='font-Poppins  ml-3 mt-2  w-[73px] h-[21px] font-medium text-[#013B8D]'>Saqib</label>
 
 
 
